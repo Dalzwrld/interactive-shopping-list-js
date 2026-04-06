@@ -85,7 +85,7 @@ function displayItems() {
 const clearBtn = document.createElement("button");
 clearBtn.classList.add("clearButton");
 
-clearBtn.innerHTML = `<button type="submit" id="clearButton">Clear list</button>`;
+clearBtn.textContent = "Clear list";
 
 // Create an event listener to clear your list
 clearBtn.addEventListener("click", () => {
@@ -98,7 +98,7 @@ clearBtn.addEventListener("click", () => {
 const totalBtn = document.createElement("button");
 totalBtn.classList.add("totalButton");
 
-totalBtn.innerHTML = `<button type="submit" id="totalButton">Total</button>`;
+totalBtn.textContent = "Total";
 
 // Create an event listener to calculate the total price of all the items in the list
 totalBtn.addEventListener("click", () => {
