@@ -59,11 +59,11 @@ function displayItems() {
             <label><input type="checkbox" class="purchase">${item.isPurchased}</label>
         `;
 
-        card.style.width = "300px";
-        card.style.height = "160px";
+        card.style.width = "150px";
+        card.style.height = "150px";
         card.style.border = "1px solid #000";
         card.style.display = "flex";
-        card.style.flexDirection = "row";
+        card.style.flexDirection = "column";
         card.style.padding = "5px";
         card.style.gap = "10px";
 
