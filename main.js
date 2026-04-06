@@ -120,28 +120,9 @@ totalBtn.addEventListener("click", () => {
     alert(`Your total price is Ksh ${total}`);
 });
 
-document.querySelectorAll("#buttonDiv button").style.padding = "15px";
-document.querySelectorAll("#buttonDiv button").style.borderRadius = "30px";
-document.querySelectorAll("#buttonDiv button").style.backgroundColor = "#04fb00";
-document.querySelectorAll("#buttonDiv button").style.width = "250px";
-document.querySelectorAll("#buttonDiv button").style.height = "40px";
-document.querySelectorAll("#buttonDiv button").style.fontWeight = "bold";
-document.querySelectorAll("#buttonDiv button").style.fontSize = "1em";
-document.querySelectorAll("#buttonDiv button").style.marginTop = "10px";
-document.querySelectorAll("#buttonDiv button").style.visibility = "hidden";
-
 
 // Create a section to put your buttons in within the list
 const buttonDiv = document.getElementById("buttonDiv");
 
 buttonDiv.appendChild(clearBtn);
 buttonDiv.appendChild(totalBtn);
-
-
-buttonDiv.style.height = "150px";
-buttonDiv.style.width = "100%";
-buttonDiv.style.display = "flex";
-buttonDiv.style.flexDirection = "column";
-buttonDiv.style.justifyContent = "center";
-buttonDiv.style.alignItems = "center";
-buttonDiv.style.gap = "10px";
