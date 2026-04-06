@@ -51,7 +51,7 @@ function displayItems() {
 
         card.innerHTML = `
             <h4>${item.productName}</h4>
-            <p>${item.productPrice}</p>
+            <p>Ksh ${item.productPrice}</p>
             <label><input type="checkbox" class="purchase">${item.isPurchased}</label>
         `;
 
@@ -63,12 +63,16 @@ function displayItems() {
         card.style.padding = "5px";
         card.style.gap = "10px";
 
-        card.querySelector(".card h4").style.fontSize = "1.5em";
-        card.querySelector(".card p").style.fontSize = "1em";
+        card.querySelector("h4").style.fontSize = "1.5em";
+        card.querySelector("p").style.fontSize = "1em";
+
+        if (item.isPurchased) {
+            card.style.textDecoration = "line-through";
+        }
 
         // Create an event listener for marking your item as complete
         card.querySelector(".purchase").addEventListener("click", () => {
-            card.style.textDecoration = "line-through";
+            item.isPurchased = !item.isPurchased;
             displayItems();
         });
 
