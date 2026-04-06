@@ -111,6 +111,9 @@ totalBtn.addEventListener("click", () => {
     alert(`Your total price is Ksh ${total}`);
 });
 
+const buttonDiv = document.createElement("div");
+
+
 document.querySelectorAll("#list button").style.padding = "15px";
 document.querySelectorAll("#list button").style.borderRadius = "30px";
 document.querySelectorAll("#list button").style.backgroundColor = "#04fb00";
