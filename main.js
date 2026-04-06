@@ -52,7 +52,7 @@ function displayItems() {
         card.innerHTML = `
             <h4>${item.productName}</h4>
             <p>${item.productPrice}</p>
-            <label><input type="checkbox" id="purchase">${item.isPurchased}</label>
+            <label><input type="checkbox" class="purchase">${item.isPurchased}</label>
         `;
 
         card.style.width = "300px";
@@ -67,7 +67,7 @@ function displayItems() {
         card.querySelector(".card p").style.fontSize = "1em";
 
         // Create an event listener for marking your item as complete
-        card.querySelector("purchase").addEventListener("click", () => {
+        card.querySelector(".purchase").addEventListener("click", () => {
             card.style.textDecoration = "line-through";
             displayItems();
         });
