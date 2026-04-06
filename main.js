@@ -47,8 +47,12 @@ addBtn.addEventListener("click", () => {
     }
 });
 
-// Link your add button and prevent it from reloading the page after form submission
+// Prevent your buttons from reloading the page after form submission
 document.getElementById("inputForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+});
+
+document.getElementById("buttonDiv").addEventListener("submit", (e) => {
     e.preventDefault();
 });
 
