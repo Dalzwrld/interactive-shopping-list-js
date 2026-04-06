@@ -85,9 +85,12 @@ function displayItems() {
 }
 
 
+const buttons = document.createElement("div");
+buttons.classList.add("buttons");
+
 // Add a clear list button
 const clearBtn = document.createElement("button");
-document.querySelector("#list").appendChild(clearBtn);
+document.querySelector(".buttons").appendChild(clearBtn);
 
 clearBtn.textContent = "Clear list";
 
@@ -100,7 +103,7 @@ clearBtn.addEventListener("click", () => {
 
 // Add a total button
 const totalBtn = document.createElement("button");
-document.querySelector("#list").appendChild(totalBtn);
+document.querySelector(".buttons").appendChild(totalBtn);
 
 totalBtn.textContent = "Total";
 
