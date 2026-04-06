@@ -92,21 +92,6 @@ function displayItems() {
 }
 
 
-// Create a section to put your buttons in within list
-const buttonDiv = document.getElementById("buttonDiv");
-
-buttonDiv.appendChild(clearBtn);
-buttonDiv.appendChild(totalBtn);
-
-buttonDiv.style.height = "150px";
-buttonDiv.style.width = "100%";
-buttonDiv.style.display = "flex";
-buttonDiv.style.justifyContent = "center";
-buttonDiv.style.alignItems = "center";
-buttonDiv.style.gap = "10px";
-
-
-
 // Add a clear list button
 const clearBtn = document.createElement("button");
 document.querySelector("#list").appendChild(clearBtn);
@@ -134,6 +119,21 @@ totalBtn.addEventListener("click", () => {
     let total = shoppingItems.reduce((total, item) => total + Number(item.productPrice));
     alert(`Your total price is Ksh ${total}`);
 });
+
+
+// Create a section to put your buttons in within list
+const buttonDiv = document.getElementById("buttonDiv");
+
+buttonDiv.appendChild(clearBtn);
+buttonDiv.appendChild(totalBtn);
+
+buttonDiv.style.height = "150px";
+buttonDiv.style.width = "100%";
+buttonDiv.style.display = "flex";
+buttonDiv.style.flexDirection = "column";
+buttonDiv.style.justifyContent = "center";
+buttonDiv.style.alignItems = "center";
+buttonDiv.style.gap = "10px";
 
 
 document.querySelectorAll("#buttonDiv button").style.padding = "15px";
