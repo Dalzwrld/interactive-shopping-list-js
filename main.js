@@ -116,4 +116,6 @@ document.querySelectorAll("#list button").style.width = "250px";
 document.querySelectorAll("#list button").style.fontWeight = "bold";
 document.querySelectorAll("#list button").style.fontSize = "1em";
 document.querySelectorAll("#list button").style.marginTop = "10px";
-
+document.querySelectorAll("#list button").style.display = "flex";
+document.querySelectorAll("#list button").style.alignItems = "flex-end";
+document.querySelectorAll("#list button").style.justifyContent = "center";
