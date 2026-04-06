@@ -36,6 +36,11 @@ function addItem() {
 addBtn.addEventListener("click", () => {
     addItem();
     displayItems();
+
+    if (shoppingItems.length > 0) {
+        clearBtn.style.visibility = "visible";
+        totalBtn.style.visibility = "visible";
+    }
 });
 
 // Link your add button and prevent it from reloading the page after form submission
@@ -96,6 +101,9 @@ clearBtn.textContent = "Clear list";
 clearBtn.addEventListener("click", () => {
     shoppingItems.length = 0;
     displayItems();
+
+    clearBtn.style.visibility = "hidden";
+    totalBtn.style.visibility = "hidden";
 });
 
 
