@@ -50,8 +50,8 @@ function displayItems() {
         card.classList.add("card");
 
         card.innerHTML = `
-            <h4>${item.name}</h4>
-            <p>${item.price}</p>
+            <h4>${item.productName}</h4>
+            <p>${item.productPrice}</p>
             <label><input type="checkbox" id="purchase">${item.isPurchased}</label>
         `;
 
