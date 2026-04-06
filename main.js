@@ -111,8 +111,8 @@ totalBtn.addEventListener("click", () => {
 });
 
 document.querySelectorAll(".list").style.padding = "15px";
-document.querySelectorAll(".list").style.padding = "15px";
-document.querySelectorAll(".list").style.padding = "15px";
+document.querySelectorAll(".list").style.borderRadius = "30px";
+document.querySelectorAll(".list").style.backgroundColor = "#04fb00";
 document.querySelectorAll(".list").style.padding = "15px";
 document.querySelectorAll(".list").style.padding = "15px";
 document.querySelectorAll(".list").style.padding = "15px";
