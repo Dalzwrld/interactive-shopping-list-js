@@ -111,7 +111,14 @@ totalBtn.addEventListener("click", () => {
     alert(`Your total price is Ksh ${total}`);
 });
 
-const buttonDiv = document.createElement("div");
+const buttonDiv = document.getElementById("buttonDiv");
+
+// document.querySelectorAll("#buttonDiv").style.height = "150px";
+// document.querySelectorAll("#buttonDiv").style.width = "100%";
+// document.querySelectorAll("#buttonDiv").style.display = "flex";
+// document.querySelectorAll("#buttonDiv").style.justifyContent = "center";
+// document.querySelectorAll("#buttonDiv").style.alignItems = "center";
+// document.querySelectorAll("#buttonDiv").style.gap = "10px";
 
 
 document.querySelectorAll("#list button").style.padding = "15px";
