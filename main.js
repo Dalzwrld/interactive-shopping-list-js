@@ -87,7 +87,7 @@ function displayItems() {
 
 // Add a clear list button
 const clearBtn = document.createElement("button");
-document.querySelector(".list").appendChild(clearBtn);
+document.querySelector(".container").appendChild(clearBtn);
 
 clearBtn.textContent = "Clear list";
 
@@ -100,7 +100,7 @@ clearBtn.addEventListener("click", () => {
 
 // Add a total button
 const totalBtn = document.createElement("button");
-document.querySelector(".list").appendChild(totalBtn);
+document.querySelector(".container").appendChild(totalBtn);
 
 totalBtn.textContent = "Total";
 
