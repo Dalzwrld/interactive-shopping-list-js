@@ -56,8 +56,9 @@ button {
 }
 
 #list {
-    display: grid;
-    /* grid-template-columns: repeat(3, auto); */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
     max-width: 100%;
     width: 650px;
     height: auto;
@@ -66,8 +67,7 @@ button {
 }
 
 .buttonDiv {
-    width: 100%;
-    max-width: 650px;
+    width: auto;
     height: 150px;
     display: flex;
     flex-direction: column;
