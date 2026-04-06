@@ -87,7 +87,7 @@ function displayItems() {
 
 // Add a clear list button
 const clearBtn = document.createElement("button");
-document.querySelector(".container").appendChild(clearBtn);
+document.querySelector(".list").appendChild(clearBtn);
 
 clearBtn.textContent = "Clear list";
 
@@ -100,7 +100,7 @@ clearBtn.addEventListener("click", () => {
 
 // Add a total button
 const totalBtn = document.createElement("button");
-document.querySelector(".container").appendChild(totalBtn);
+document.querySelector(".list").appendChild(totalBtn);
 
 totalBtn.textContent = "Total";
 
@@ -109,3 +109,11 @@ totalBtn.addEventListener("click", () => {
     let total = shoppingItems.reduce((total, item) => total + Number(item.productPrice));
     alert(`Your total price is Ksh ${total}`);
 });
+
+document.querySelectorAll(".list").style.padding = "15px";
+document.querySelectorAll(".list").style.padding = "15px";
+document.querySelectorAll(".list").style.padding = "15px";
+document.querySelectorAll(".list").style.padding = "15px";
+document.querySelectorAll(".list").style.padding = "15px";
+document.querySelectorAll(".list").style.padding = "15px";
+document.querySelectorAll(".list").style.padding = "15px";
