@@ -38,6 +38,10 @@ addBtn.addEventListener("click", () => {
     displayItems();
 });
 
+// Link your add button and prevent it from reloading the page after form submission
+document.getElementById("inputForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+});
 
 // Create a new function to display your items in your display list
 function displayItems() {
