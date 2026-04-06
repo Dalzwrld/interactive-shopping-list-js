@@ -64,7 +64,7 @@ function displayItems() {
         card.style.border = "2px solid #2a2a2a";
         card.style.display = "grid";
         card.style.gridTemplateRows = "1fr 1fr 1fr";
-        card.style.flexDirection = "column";
+        card.style.flexDirection = "row";
         card.style.padding = "5px";
         card.style.gap = "10px";
         card.style.marginTop = "10px";
@@ -111,7 +111,11 @@ totalBtn.addEventListener("click", () => {
     alert(`Your total price is Ksh ${total}`);
 });
 
+// Create a section to put your buttons in within list
 const buttonDiv = document.getElementById("buttonDiv");
+
+buttonDiv.appendChild(clearBtn);
+buttonDiv.appendChild(totalBtn);
 
 // document.querySelectorAll("#buttonDiv").style.height = "150px";
 // document.querySelectorAll("#buttonDiv").style.width = "100%";
@@ -121,13 +125,12 @@ const buttonDiv = document.getElementById("buttonDiv");
 // document.querySelectorAll("#buttonDiv").style.gap = "10px";
 
 
-document.querySelectorAll("#list button").style.padding = "15px";
-document.querySelectorAll("#list button").style.borderRadius = "30px";
-document.querySelectorAll("#list button").style.backgroundColor = "#04fb00";
-document.querySelectorAll("#list button").style.width = "250px";
-document.querySelectorAll("#list button").style.fontWeight = "bold";
-document.querySelectorAll("#list button").style.fontSize = "1em";
-document.querySelectorAll("#list button").style.marginTop = "10px";
-document.querySelectorAll("#list button").style.display = "flex";
-document.querySelectorAll("#list button").style.alignItems = "flex-end";
-document.querySelectorAll("#list button").style.justifyContent = "center";
+document.querySelectorAll("#buttonDiv button").style.padding = "15px";
+document.querySelectorAll("#buttonDiv button").style.borderRadius = "30px";
+document.querySelectorAll("#buttonDiv button").style.backgroundColor = "#04fb00";
+document.querySelectorAll("#buttonDiv button").style.width = "250px";
+document.querySelectorAll("#buttonDiv button").style.fontWeight = "bold";
+document.querySelectorAll("#buttonDiv button").style.fontSize = "1em";
+document.querySelectorAll("#buttonDiv button").style.marginTop = "10px";
+document.querySelectorAll("#buttonDiv button").style.visibility = "hidden";
+
