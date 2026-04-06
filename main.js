@@ -5,11 +5,11 @@ const shoppingItems = [];
 const productName = document.getElementById("itemName");    
 const productPrice = document.getElementById("itemPrice");
 const addBtn = document.getElementById("addButton");
-const list = document.getElementById("displayList");
+const list = document.getElementById("list");
 
 
 // Create a function to add your items
-function addItem(name, price) {
+function addItem() {
     const name = document.getElementById("itemName").value;
     const price = document.getElementById("itemPrice").value;
 
@@ -50,7 +50,7 @@ function displayItems() {
 
     // Create a card that'll display your items after addition
     shoppingItems.forEach(item => {
-        const card = document.createElement("<li>");
+        const card = document.createElement("li");
         card.classList.add("card");
 
         card.innerHTML = `
