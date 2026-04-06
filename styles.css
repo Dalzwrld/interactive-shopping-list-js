@@ -65,6 +65,10 @@ button {
     margin: 0 80px;
 }
 
-ul li {
-    margin: 20px;
+#buttonDiv {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -7,6 +7,10 @@ const productPrice = document.getElementById("itemPrice");
 const addBtn = document.getElementById("addButton");
 const list = document.getElementById("list");
 
+const buttonDiv = document.getElementById("buttonDiv");
+
+const clearBtn = document.getElementById("clearButton");
+const totalBtn = document.getElementById("totalButton");
 
 // Create a function to add your items
 function addItem() {
@@ -55,7 +59,7 @@ function displayItems() {
 
     // Create a card that'll display your items after addition
     shoppingItems.forEach(item => {
-        const card = document.createElement("li");
+        const card = document.createElement("div");
         card.classList.add("card");
 
         card.innerHTML = `
@@ -92,12 +96,6 @@ function displayItems() {
 }
 
 
-// Add a clear list button
-const clearBtn = document.createElement("button");
-document.querySelector("#list").appendChild(clearBtn);
-
-clearBtn.textContent = "Clear list";
-
 // Create an event listener to clear your list
 clearBtn.addEventListener("click", () => {
     shoppingItems.length = 0;
@@ -108,21 +106,8 @@ clearBtn.addEventListener("click", () => {
 });
 
 
-// Add a total button
-const totalBtn = document.createElement("button");
-document.querySelector("#list").appendChild(totalBtn);
-
-totalBtn.textContent = "Total";
-
 // Create an event listener to calculate the total price of all the items in the list
 totalBtn.addEventListener("click", () => {
     let total = shoppingItems.reduce((total, item) => total + Number(item.productPrice));
     alert(`Your total price is Ksh ${total}`);
 });
-
-
-// Create a section to put your buttons in within the list
-const buttonDiv = document.getElementById("buttonDiv");
-
-buttonDiv.appendChild(clearBtn);
-buttonDiv.appendChild(totalBtn);
