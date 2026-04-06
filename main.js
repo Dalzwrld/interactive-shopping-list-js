@@ -21,7 +21,7 @@ function addItem() {
     // Create an object to store each product with its price
     const item = {
         productName: `${name}`,
-        productPrice: `${Number(price)}`,
+        productPrice: Number(price),
         isPurchased: false, 
     };
 
@@ -93,7 +93,7 @@ clearBtn.textContent = "Clear list";
 
 // Create an event listener to clear your list
 clearBtn.addEventListener("click", () => {
-    shoppingItems = [];
+    shoppingItems.length = 0;
     displayItems();
 });
 
@@ -106,6 +106,6 @@ totalBtn.textContent = "Total";
 
 // Create an event listener to calculate the total price of all the items in the list
 totalBtn.addEventListener("click", () => {
-    let total = shoppingItems.reduce((total, item) => total + item.price);
+    let total = shoppingItems.reduce((total, item) => total + Number(item.productPrice));
     alert(`Your total price is Ksh ${total}`);
 });
