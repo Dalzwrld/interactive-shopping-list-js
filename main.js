@@ -87,7 +87,7 @@ function displayItems() {
 
 // Add a clear list button
 const clearBtn = document.createElement("button");
-document.querySelector(".list").appendChild(clearBtn);
+document.querySelector("#list").appendChild(clearBtn);
 
 clearBtn.textContent = "Clear list";
 
@@ -100,7 +100,7 @@ clearBtn.addEventListener("click", () => {
 
 // Add a total button
 const totalBtn = document.createElement("button");
-document.querySelector(".list").appendChild(totalBtn);
+document.querySelector("#list").appendChild(totalBtn);
 
 totalBtn.textContent = "Total";
 
@@ -110,10 +110,10 @@ totalBtn.addEventListener("click", () => {
     alert(`Your total price is Ksh ${total}`);
 });
 
-document.querySelectorAll(".list").style.padding = "15px";
-document.querySelectorAll(".list").style.borderRadius = "30px";
-document.querySelectorAll(".list").style.backgroundColor = "#04fb00";
-document.querySelectorAll(".list").style.padding = "15px";
-document.querySelectorAll(".list").style.padding = "15px";
-document.querySelectorAll(".list").style.padding = "15px";
-document.querySelectorAll(".list").style.padding = "15px";
+document.querySelectorAll(".list button").style.padding = "15px";
+document.querySelectorAll(".list button").style.borderRadius = "30px";
+document.querySelectorAll(".list button").style.backgroundColor = "#04fb00";
+document.querySelectorAll(".list button").style.width = "250px";
+document.querySelectorAll(".list button").style.fontWeight = "bold";
+document.querySelectorAll(".list button").style.fontSize = "1em";
+document.querySelectorAll(".list button").style.marginTop = "10px";
