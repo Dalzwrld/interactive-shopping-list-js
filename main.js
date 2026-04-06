@@ -61,11 +61,13 @@ function displayItems() {
 
         card.style.width = "150px";
         card.style.height = "150px";
-        card.style.border = "1px solid #000";
-        card.style.display = "flex";
+        card.style.border = "2px solid #2a2a2a";
+        card.style.display = "grid";
+        card.style.gridTemplateRows = "1fr 1fr 1fr";
         card.style.flexDirection = "column";
         card.style.padding = "5px";
         card.style.gap = "10px";
+        card.style.marginTop = "10px";
 
         card.querySelector("h4").style.fontSize = "1.5em";
         card.querySelector("p").style.fontSize = "1em";

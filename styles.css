@@ -56,12 +56,11 @@ button {
 }
 
 #list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
     max-width: 100%;
-    width: 650px;
+    width: 700px;
     height: 100vh;
     border: 2px solid #000;
     margin: 10px 80px;
