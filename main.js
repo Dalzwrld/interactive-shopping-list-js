@@ -92,8 +92,9 @@ function displayItems() {
         }
 
         // Create an event listener for marking your item as complete
-        card.querySelector(".purchase").addEventListener("click", () => {
-            item.isPurchased = !item.isPurchased;
+        const checkbox = card.querySelector(".purchase");
+        checkbox.addEventListener("change", () => {
+            item.isPurchased = checkbox.checked;
             displayItems();
         });
 
