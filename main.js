@@ -47,6 +47,7 @@ addBtn.addEventListener("click", () => {
     }
 });
 
+
 // Prevent your buttons from reloading the page after form submission
 document.getElementById("inputForm").addEventListener("submit", (e) => {
     e.preventDefault();
@@ -55,6 +56,7 @@ document.getElementById("inputForm").addEventListener("submit", (e) => {
 document.getElementById("buttonDiv").addEventListener("submit", (e) => {
     e.preventDefault();
 });
+
 
 // Create a new function to display your items in your display list
 function displayItems() {
@@ -112,6 +114,10 @@ clearBtn.addEventListener("click", () => {
 
 // Create an event listener to calculate the total price of all the items in the list
 totalBtn.addEventListener("click", () => {
-    let total = shoppingItems.reduce((sum, item) => sum + Number(item.productPrice));
+    let total = 0;
+    shoppingItems.forEach(item => {
+        total += item.productPrice;
+    });
     alert(`Your total price is Ksh ${total}`);
 });
+
