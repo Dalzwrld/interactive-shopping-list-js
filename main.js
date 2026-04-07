@@ -112,6 +112,6 @@ clearBtn.addEventListener("click", () => {
 
 // Create an event listener to calculate the total price of all the items in the list
 totalBtn.addEventListener("click", () => {
-    let total = shoppingItems.reduce((total, item) => total + Number(item.productPrice));
+    let total = shoppingItems.reduce((sum, item) => sum + Number(item.productPrice));
     alert(`Your total price is Ksh ${total}`);
 });
