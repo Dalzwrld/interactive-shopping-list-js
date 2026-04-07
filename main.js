@@ -48,7 +48,7 @@ addBtn.addEventListener("click", () => {
 });
 
 
-// Prevent your buttons from reloading the page after form submission
+// Create an event listener to prevent your add button from reloading the page after form submission
 document.getElementById("inputForm").addEventListener("submit", (e) => {
     e.preventDefault();
 });
@@ -119,6 +119,7 @@ totalBtn.addEventListener("click", () => {
     alert(`Your total price is Ksh ${total}`);
 });
 
+// Create an event listener to prevent your buttons form reloading the page after form submission
 document.getElementById("buttonDiv").addEventListener("submit", (e) => {
     e.preventDefault();
 });
