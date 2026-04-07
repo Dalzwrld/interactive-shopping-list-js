@@ -53,10 +53,6 @@ document.getElementById("inputForm").addEventListener("submit", (e) => {
     e.preventDefault();
 });
 
-document.getElementById("buttonDiv").addEventListener("submit", (e) => {
-    e.preventDefault();
-});
-
 
 // Create a new function to display your items in your display list
 function displayItems() {
@@ -123,3 +119,6 @@ totalBtn.addEventListener("click", () => {
     alert(`Your total price is Ksh ${total}`);
 });
 
+document.getElementById("buttonDiv").addEventListener("submit", (e) => {
+    e.preventDefault();
+});
