@@ -45,7 +45,6 @@ addBtn.addEventListener("click", () => {
 
     if (shoppingItems.length > 0) {
         clearBtn.style.visibility = "visible";
-        totalBtn.style.visibility = "visible";
     }
 });
 
