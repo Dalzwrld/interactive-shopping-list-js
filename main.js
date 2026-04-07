@@ -9,8 +9,13 @@ const list = document.getElementById("list");
 
 const buttonDiv = document.getElementById("buttonDiv");
 
+// Define button types to allow preventDefault() to work
 const clearBtn = document.getElementById("clearButton");
+clearBtn.type = "button";
+
 const totalBtn = document.getElementById("totalButton");
+totalBtn.type = "button";
+
 
 // Create a function to add your items
 function addItem() {
@@ -111,7 +116,9 @@ clearBtn.addEventListener("click", () => {
 
 
 // Create an event listener to calculate the total price of all the items in the list
-totalBtn.addEventListener("click", () => {
+totalBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    
     let total = 0;
     shoppingItems.forEach(item => {
         total += item.productPrice;
