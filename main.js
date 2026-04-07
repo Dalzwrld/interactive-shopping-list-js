@@ -13,9 +13,6 @@ const buttonDiv = document.getElementById("buttonDiv");
 const clearBtn = document.getElementById("clearButton");
 clearBtn.type = "button";
 
-const totalBtn = document.getElementById("totalButton");
-totalBtn.type = "button";
-
 
 // Create a function to add your items
 function addItem() {
@@ -87,6 +84,7 @@ function displayItems() {
 
         card.querySelector("h4").style.fontSize = "1.5em";
         card.querySelector("p").style.fontSize = "1em";
+        card.querySelector("p").style.color = "#07aa12";
 
         if (item.isPurchased) {
             card.querySelector("h4").style.textDecoration = "line-through";
@@ -111,20 +109,8 @@ clearBtn.addEventListener("click", () => {
     displayItems();
 
     clearBtn.style.visibility = "hidden";
-    totalBtn.style.visibility = "hidden";
 });
 
-
-// Create an event listener to calculate the total price of all the items in the list
-totalBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    
-    let total = 0;
-    shoppingItems.forEach(item => {
-        total += item.productPrice;
-    });
-    alert(`Your total price is Ksh ${total}`);
-});
 
 // Create an event listener to prevent your buttons form reloading the page after form submission
 document.getElementById("buttonDiv").addEventListener("submit", (e) => {
