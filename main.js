@@ -71,7 +71,7 @@ function displayItems() {
         card.innerHTML = `
             <h4>${item.productName}</h4>
             <p>Ksh ${item.productPrice}</p>
-            <label><input type="checkbox" class="purchase">${item.isPurchased}</label>
+            <label><input type="checkbox" class="purchase"${item.isPurchased ? "Checked": ""}>Mark as Purchased</label>
         `;
 
         card.style.width = "150px";
