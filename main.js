@@ -88,7 +88,8 @@ function displayItems() {
         card.querySelector("p").style.fontSize = "1em";
 
         if (item.isPurchased) {
-            card.style.textDecoration = "line-through";
+            card.querySelector("h4").style.textDecoration = "line-through";
+            card.querySelector("p").style.textDecoration = "line-through";
         }
 
         // Create an event listener for marking your item as complete
