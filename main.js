@@ -26,7 +26,7 @@ function addItem() {
     const item = {
         productName: `${name}`,
         productPrice: Number(price),
-        isPurchased: false, 
+        isPurchased: `false`, 
     };
 
     // Add your object into your array
