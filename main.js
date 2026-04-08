@@ -42,7 +42,6 @@ function addItem() {
 // Create an event listener to add items to the list
 addBtn.addEventListener("click", () => {
     addItem();
-    saveToLocalStorage();
     displayItems();
 
     if (shoppingList.length > 0) {
@@ -95,7 +94,7 @@ function displayItems() {
         // Create an event listener for marking your item as complete
         const checkbox = card.querySelector(".purchase");
         checkbox.addEventListener("change", () => {
-            item.isPurchased = checkbox.checked;
+            item[index].isPurchased = checkbox.checked;
             saveToLocalStorage();
             displayItems();
         });
