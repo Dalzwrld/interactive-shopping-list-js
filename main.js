@@ -80,7 +80,7 @@ function displayItems() {
         card.style.gridTemplateRows = "1fr 1fr 1fr";
         card.style.flexDirection = "column";
         card.style.padding = "10px";
-        card.style.gap = "20px";
+        card.style.gap = "15px";
         card.style.marginTop = "10px";
         card.style.boxShadow = "10px 10px 5px #151414";
         card.style.backgroundColor = "#fff";
