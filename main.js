@@ -99,7 +99,7 @@ function displayItems() {
         // Create an event listener for marking your item as complete
         const checkbox = card.querySelector(".purchase");
         checkbox.addEventListener("change", () => {
-            item[index].isPurchased = checkbox.checked;
+            item.isPurchased = checkbox.checked;
             saveToLocalStorage();
             displayItems();
         });
