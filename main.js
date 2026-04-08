@@ -1,4 +1,4 @@
-// Define the array
+// Define the array & add it into local storage to save your added items
 let shoppingList = JSON.parse(localStorage.getItem("list")) || [];
 
 // Fetch your elements from your HTML code
