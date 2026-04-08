@@ -32,6 +32,8 @@ header {
 .container {
     display: flex;
     flex-direction: row;
+    align-items: start;
+    justify-content: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -41,12 +43,12 @@ header {
     align-items: center;
     justify-content: center;
     max-width: 100%;
-    width: 500px;
+    width: 350px;
     height: 450px;
     border: none;
     background-color: #fff;
     box-shadow: 10px 10px 5px #151414;
-    margin: 10px 60px;
+    margin: 40px 60px;
     border-radius: 10px;
 }
 
@@ -87,7 +89,7 @@ button {
     max-width: 100%;
     width: 700px;
     height: auto;
-    margin: 0 60px;
+    margin: 20px 60px;
     padding: 15px 50px;
 }
 
