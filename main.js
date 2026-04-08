@@ -115,3 +115,11 @@ clearBtn.addEventListener("click", () => {
 document.getElementById("buttonDiv").addEventListener("submit", (e) => {
     e.preventDefault();
 });
+
+// Save to local storage
+function saveToLocalStorage() {
+    localStorage.setItem("list", JSON.stringify(interactiveShoppingList));
+}
+
+// Initial load
+displayItems();
