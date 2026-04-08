@@ -90,6 +90,7 @@ function displayItems() {
         card.querySelector("p").style.fontSize = "1em";
         card.querySelector("p").style.color = "#07aa12";
         card.querySelector("p").style.fontWeight = "500";
+        
 
         if (item.isPurchased) {
             card.querySelector("h4").style.textDecoration = "line-through";
