@@ -74,7 +74,7 @@ function displayItems() {
         `;
 
         card.style.width = "180px";
-        card.style.height = "15q0px";
+        card.style.height = "150px";
         card.style.border = "none";
         card.style.display = "grid";
         card.style.gridTemplateRows = "1fr 1fr 1fr";
