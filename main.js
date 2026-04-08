@@ -1,5 +1,5 @@
 // Define the array
-let interactiveShoppingList = JSON.parse(localStorage.getItem("list")) || [];
+let shoppingList = JSON.parse(localStorage.getItem("list")) || [];
 
 // Fetch your elements from your HTML code
 const productName = document.getElementById("itemName");    
@@ -32,7 +32,8 @@ function addItem() {
     };
 
     // Add your object into your array
-    interactiveShoppingList.push(item);
+    shoppingList.push(item);
+    saveToLocalStorage();
 
     document.getElementById("itemName").value = "";
     document.getElementById("itemPrice").value = "";
@@ -41,9 +42,10 @@ function addItem() {
 // Create an event listener to add items to the list
 addBtn.addEventListener("click", () => {
     addItem();
+    saveToLocalStorage();
     displayItems();
 
-    if (interactiveShoppingList.length > 0) {
+    if (shoppingList.length > 0) {
         clearBtn.style.visibility = "visible";
     }
 });
@@ -61,7 +63,7 @@ function displayItems() {
     list.innerHTML = "";
 
     // Create a card that'll display your items after addition
-    interactiveShoppingList.forEach(item => {
+    shoppingList.forEach(item => {
         const card = document.createElement("div");
         card.classList.add("card");
 
@@ -94,6 +96,7 @@ function displayItems() {
         const checkbox = card.querySelector(".purchase");
         checkbox.addEventListener("change", () => {
             item.isPurchased = checkbox.checked;
+            saveToLocalStorage();
             displayItems();
         });
 
@@ -104,7 +107,8 @@ function displayItems() {
 
 // Create an event listener to clear your list
 clearBtn.addEventListener("click", () => {
-    interactiveShoppingList.length = 0;
+    shoppingList.length = 0;
+    saveToLocalStorage();
     displayItems();
 
     clearBtn.style.visibility = "hidden";
@@ -118,7 +122,7 @@ document.getElementById("buttonDiv").addEventListener("submit", (e) => {
 
 // Save to local storage
 function saveToLocalStorage() {
-    localStorage.setItem("list", JSON.stringify(interactiveShoppingList));
+    localStorage.setItem("list", JSON.stringify(shoppingList));
 }
 
 // Initial load
