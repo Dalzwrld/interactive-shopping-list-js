@@ -1,5 +1,5 @@
 // Define the array
-const shoppingItems = [];
+let interactiveShoppingList = JSON.parse(localStorage.getItem("list")) || [];
 
 // Fetch your elements from your HTML code
 const productName = document.getElementById("itemName");    
@@ -32,7 +32,7 @@ function addItem() {
     };
 
     // Add your object into your array
-    shoppingItems.push(item);
+    interactiveShoppingList.push(item);
 
     document.getElementById("itemName").value = "";
     document.getElementById("itemPrice").value = "";
@@ -43,7 +43,7 @@ addBtn.addEventListener("click", () => {
     addItem();
     displayItems();
 
-    if (shoppingItems.length > 0) {
+    if (interactiveShoppingList.length > 0) {
         clearBtn.style.visibility = "visible";
     }
 });
@@ -61,7 +61,7 @@ function displayItems() {
     list.innerHTML = "";
 
     // Create a card that'll display your items after addition
-    shoppingItems.forEach(item => {
+    interactiveShoppingList.forEach(item => {
         const card = document.createElement("div");
         card.classList.add("card");
 
@@ -104,7 +104,7 @@ function displayItems() {
 
 // Create an event listener to clear your list
 clearBtn.addEventListener("click", () => {
-    shoppingItems.length = 0;
+    interactiveShoppingList.length = 0;
     displayItems();
 
     clearBtn.style.visibility = "hidden";
