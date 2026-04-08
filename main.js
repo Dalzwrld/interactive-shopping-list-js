@@ -52,7 +52,7 @@ addBtn.addEventListener("click", () => {
 
 
 // Create an event listener to prevent your add button from reloading the page after form submission
-document.getElementById("inputForm").addEventListener("button", (e) => {
+document.getElementById("inputForm").addEventListener("submit", (e) => {
     e.preventDefault();
 });
 
@@ -120,7 +120,7 @@ clearBtn.addEventListener("click", () => {
 
 
 // Create an event listener to prevent your buttons form reloading the page after form submission
-document.getElementById("buttonDiv").addEventListener("button", (e) => {
+document.getElementById("buttonDiv").addEventListener("submit", (e) => {
     e.preventDefault();
 });
 
