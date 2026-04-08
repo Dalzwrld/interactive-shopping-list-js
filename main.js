@@ -1,5 +1,11 @@
 // Define the array
-let shoppingList = JSON.parse(localStorage.getItem("list")) || [];
+const shoppingList = [];
+
+let storedItems = JSON.parse(localStorage.getItem(shoppingList)) || [];
+
+if (storedItems) {
+    shoppingList.push(...storedItems);
+}
 
 // Fetch your elements from your HTML code
 const productName = document.getElementById("itemName");    
