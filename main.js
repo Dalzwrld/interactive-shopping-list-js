@@ -1,11 +1,5 @@
 // Define the array
-const shoppingList = [];
-
-let storedItems = JSON.parse(localStorage.getItem(shoppingList)) || [];
-
-if (storedItems) {
-    shoppingList.push(...storedItems);
-}
+let shoppingList = JSON.parse(localStorage.getItem("list")) || [];
 
 // Fetch your elements from your HTML code
 const productName = document.getElementById("itemName");    
@@ -26,14 +20,14 @@ function addItem() {
     const price = document.getElementById("itemPrice").value;
 
     // Check for validity of your inputs
-    if (name === "" || isNaN(Number(price))) {
+    if (name === "" || isNaN(parseFloat(price))) {
         return;
     }
 
     // Create an object to store each product with its price
     const item = {
         productName: `${name}`,
-        productPrice: Number(price),
+        productPrice: parseFloat(price),
         isPurchased: false,
     };
 
@@ -48,6 +42,7 @@ function addItem() {
 // Create an event listener to add items to the list
 addBtn.addEventListener("click", () => {
     addItem();
+    saveToLocalStorage();
     displayItems();
 
     if (shoppingList.length > 0) {
@@ -80,13 +75,16 @@ function displayItems() {
 
         card.style.width = "150px";
         card.style.height = "150px";
-        card.style.border = "2px solid #2a2a2a";
+        card.style.border = "none";
         card.style.display = "grid";
         card.style.gridTemplateRows = "1fr 1fr 1fr";
         card.style.flexDirection = "column";
-        card.style.padding = "5px";
+        card.style.padding = "10px";
         card.style.gap = "10px";
         card.style.marginTop = "10px";
+        card.style.boxShadow = "10px 10px 5px #151414";
+        card.style.backgroundColor = "#fff";
+        card.style.borderRadius = "5px";
 
         card.querySelector("h4").style.fontSize = "1.5em";
         card.querySelector("p").style.fontSize = "1em";
