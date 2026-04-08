@@ -52,7 +52,7 @@ addBtn.addEventListener("click", () => {
 
 
 // Create an event listener to prevent your add button from reloading the page after form submission
-document.getElementById("inputForm").addEventListener("submit", (e) => {
+document.getElementById("inputForm").addEventListener("button", (e) => {
     e.preventDefault();
 });
 
@@ -73,14 +73,14 @@ function displayItems() {
             <label><input type="checkbox" class="purchase"${item.isPurchased ? "Checked": ""}>Mark as Purchased</label>
         `;
 
-        card.style.width = "150px";
-        card.style.height = "150px";
+        card.style.width = "180px";
+        card.style.height = "15q0px";
         card.style.border = "none";
         card.style.display = "grid";
         card.style.gridTemplateRows = "1fr 1fr 1fr";
         card.style.flexDirection = "column";
         card.style.padding = "10px";
-        card.style.gap = "10px";
+        card.style.gap = "20px";
         card.style.marginTop = "10px";
         card.style.boxShadow = "10px 10px 5px #151414";
         card.style.backgroundColor = "#fff";
@@ -89,6 +89,7 @@ function displayItems() {
         card.querySelector("h4").style.fontSize = "1.5em";
         card.querySelector("p").style.fontSize = "1em";
         card.querySelector("p").style.color = "#07aa12";
+        card.querySelector("p").style.fontWeight = "500";
 
         if (item.isPurchased) {
             card.querySelector("h4").style.textDecoration = "line-through";
@@ -119,7 +120,7 @@ clearBtn.addEventListener("click", () => {
 
 
 // Create an event listener to prevent your buttons form reloading the page after form submission
-document.getElementById("buttonDiv").addEventListener("submit", (e) => {
+document.getElementById("buttonDiv").addEventListener("button", (e) => {
     e.preventDefault();
 });
 

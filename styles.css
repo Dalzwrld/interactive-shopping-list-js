@@ -7,7 +7,7 @@
 }
 
 body {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: auto;
     background-color: #bdbcbc;
 }
@@ -32,7 +32,7 @@ h1 {
     justify-content: center;
     max-width: 100%;
     width: 500px;
-    height: 400px;
+    height: 450px;
     border: none;
     background-color: #fff;
     box-shadow: 10px 10px 5px #151414;
@@ -64,7 +64,7 @@ button {
     align-items: flex-start;
     justify-content: center;
     max-width: 100%;
-    width: 650px;
+    width: 700px;
     height: auto;
     margin: 0 60px;
 }
@@ -74,7 +74,7 @@ button {
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-evenly;
     max-width: 100%;
-    width: 600px;
+    width: 700px;
     height: auto;
     margin: 0 60px;
     padding: 10px 50px;
