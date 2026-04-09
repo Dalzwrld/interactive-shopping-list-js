@@ -68,9 +68,17 @@ function displayItems() {
         card.classList.add("card");
 
         card.innerHTML = `
-            <h4>${item.productName}</h4>
-            <p>Ksh ${item.productPrice}</p>
             <label><input type="checkbox" class="purchase"${item.isPurchased ? "Checked": ""}></label>
+
+            <div class="info">
+                <h4>${item.productName}</h4>
+                <p>Ksh ${item.productPrice}</p>
+            </div>
+
+            <div class="actions">
+                <button><img src="Images/pen-to-square-solid-full.svg" alt="Edit button"></button>
+                <button><img src="Images/trash-solid-full.svg" alt="Delete button"></button>
+            </div>
         `;
 
         card.style.width = "800px";
