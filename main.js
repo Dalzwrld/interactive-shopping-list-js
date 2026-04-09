@@ -70,14 +70,13 @@ function displayItems() {
         card.innerHTML = `
             <h4>${item.productName}</h4>
             <p>Ksh ${item.productPrice}</p>
-            <label><input type="checkbox" class="purchase"${item.isPurchased ? "Checked": ""}>Mark as Purchased</label>
+            <label><input type="checkbox" class="purchase"${item.isPurchased ? "Checked": ""}></label>
         `;
 
-        card.style.width = "180px";
+        card.style.width = "800px";
         card.style.height = "150px";
         card.style.border = "none";
-        card.style.display = "grid";
-        card.style.gridTemplateRows = "1fr";
+        card.style.display = "flex";
         card.style.flexDirection = "column";
         card.style.padding = "10px";
         card.style.gap = "15px";
