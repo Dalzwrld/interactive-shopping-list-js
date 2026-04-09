@@ -81,18 +81,6 @@ function displayItems() {
             </div>
         `;
 
-        card.style.width = "800px";
-        card.style.height = "150px";
-        card.style.border = "none";
-        card.style.display = "flex";
-        card.style.flexDirection = "column";
-        card.style.padding = "10px";
-        card.style.gap = "15px";
-        card.style.marginTop = "10px";
-        card.style.boxShadow = "10px 10px 5px #151414";
-        card.style.backgroundColor = "#fff";
-        card.style.borderRadius = "5px";
-
         card.querySelector("h4").style.fontSize = "1.5em";
         card.querySelector("p").style.fontSize = "1em";
         card.querySelector("p").style.color = "#07aa12";
@@ -108,6 +96,7 @@ function displayItems() {
         const checkbox = card.querySelector(".purchase");
         checkbox.addEventListener("change", () => {
             item.isPurchased = checkbox.checked;
+            card.querySelector("label").style.backgroundColor = "#59bd8b";
             saveToLocalStorage();
             displayItems();
         });

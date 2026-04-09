@@ -103,6 +103,25 @@ button {
     gap: 20px;
 }
 
+.card {
+    width: 800px;
+    height: 150px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 15px;
+    margin-top: 10px;
+    box-shadow: 10px 10px 5px #151414;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.card button {
+    width: 48px;
+    height: 48px;
+}
+
 #buttonDiv {
     width: 600px;
     height: 160px;
