@@ -77,7 +77,7 @@ function displayItems() {
         card.style.height = "150px";
         card.style.border = "none";
         card.style.display = "grid";
-        card.style.gridTemplateRows = "1fr 1fr 1fr";
+        card.style.gridTemplateRows = "1fr";
         card.style.flexDirection = "column";
         card.style.padding = "10px";
         card.style.gap = "15px";

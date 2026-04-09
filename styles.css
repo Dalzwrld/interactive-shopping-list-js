@@ -88,7 +88,7 @@ button {
 
 #list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     justify-content: space-evenly;
     max-width: 100%;
     width: 700px;
@@ -120,5 +120,5 @@ button {
 
 .attribution a {
     text-decoration: none;
-    color: #59bd8b;
+    color: #000;
 }
